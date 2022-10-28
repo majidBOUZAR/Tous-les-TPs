@@ -1,0 +1,138 @@
+                             RAPPORT NUMERO 2 AIDE A LA DECISION 
+
+
+Nom : bouzar 
+Prenom :  lakhdar abdelmajid
+Specialite : WIC Master 1
+
+---------------------------------------------
+
+RELATION D'EQUIVALENCE
+
+si et seulment si:
+
+Relation R is Reflexive, i.e. aRa  pour tout a appartient A.
+Relation R is Symmetric, i.e., aRb ==> bRa
+Relation R is transitive, i.e., aRb and bRc ==> aRc.
+
+---------------------------------------------
+m=matrix(0,nrow=6,ncol=,6)
+for(i in 1:6)
+{
+for(j in 1:6)
+{
+if((j%%i)==0)
+m[i,j]=1
+else
+m[i,j]=0
+}}
+if(sum(diag(m))==6)
+{
+print('la relation est reflexive')
+}
+else
+{
+print('la relation nest pas reflexive')
+
+}---------------------------------------------
+
+m=matrix(0,nrow=6,ncol=,6)
+r=0
+for(i in 1:6)
+for(j in 1:6)
+if(e[i,j]==e[j,i] && e[j,i]==1)
+r=r+1
+if (r!=0)
+print('R est symetrique”')
+u2=TRUE
+else print('R n’est pas symetrique')
+u2=FALSE
+
+---------------------------------------------
+
+m=matrix(0,nrow=6,ncol=,6)
+p=0
+for(i in 1:6)
+for(j in 1:6)
+for(k in 1:6)
+if(e[i,j]==1 && e[j,k]==1 && e[i,k]==1)
+p=p+1
+if (p!=0)
+{
+print('R est transitive')
+u1=TRUE
+}
+else 
+{
+print('R n’est pas transitive')
+u1=FALSE
+}
+
+-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+
+
+RELATION D'ORDRE
+
+Relation R is Reflexive, i.e. aRa pour tous a appartient A.
+Relation R is Antisymmetric, i.e., aRb and bRa ==> a = b.
+Relation R is transitive, i.e., aRb and bRc ==> aRc.
+
+-----------------------------------------------------
+m=matrix(0,nrow=6,ncol=,6)
+for(i in 1:6)
+{
+for(j in 1:6)
+{
+if((j%%i)==0)
+m[i,j]=1
+else
+m[i,j]=0
+}}
+if(sum(diag(m))==6)
+{
+print('la relation est reflexive')
+}
+else
+{
+print('la relation nest pas reflexive')
+
+}
+
+---------------------------------------------
+
+m=matrix(0,nrow=6,ncol=,6)
+r=0
+for(i in 1:6)
+for(j in 1:6)
+if(e[i,j]==e[j,i] && j==i)
+r=r+1
+if (r!=0)
+{
+print('R est antisymetrique')
+u2=TRUE
+}
+else 
+{
+print('R n’est pas antisymetrique')
+u2=FALSE
+}
+---------------------------------------------
+
+m=matrix(0,nrow=6,ncol=,6)
+p=0
+for(i in 1:6)
+for(j in 1:6)
+for(k in 1:6)
+if(e[i,j]==1 && e[j,k]==1 && e[i,k]==1)
+p=p+1
+if (p!=0)
+{
+print('R est transitive')
+u1=TRUE
+}
+else 
+{
+print('R n’est pas transitive')
+u1=FALSE
+}
