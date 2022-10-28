@@ -1,0 +1,55 @@
+Création de requêtes:
+query {
+  urls {
+    id
+    fullUrl
+    urlHash
+    clicks
+    createdAt
+  }
+}
+Créer des mutations:
+mutation {
+  createUrl(fullUrl:"https://www.digitalocean.com/community") {
+    url {
+      id
+      fullUrl
+      urlHash
+      clicks
+      createdAt
+    }
+  }
+}
+Créer le point final d'accès :
+Mise en œuvre du traitement des erreurs:
+mutation {
+  createUrl(fullUrl:"not_valid_url"){
+    url {
+      id
+      fullUrl
+      urlHash
+      clicks
+      createdAt
+    }
+  }
+}
+Mise en place des filtres :
+query {
+  urls(url:"community") {
+    id
+    fullUrl
+    urlHash
+    clicks
+    createdAt
+  }
+}
+Mise en place de la pagination :
+query {
+  urls(first: 2, skip: 1) {
+    id
+    fullUrl
+    urlHash
+    clicks
+    createdAt
+  }
+}
