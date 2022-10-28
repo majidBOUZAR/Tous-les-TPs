@@ -5,3 +5,4 @@
 - QGIS
 - WEB
 - Cryptograpie
+- Data mining and intelligence artificielle
